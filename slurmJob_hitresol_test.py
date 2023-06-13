@@ -59,7 +59,7 @@ config.numJobs = None
 
 config.inputParamsNames = ['inputFile']
 
-config.inputParams = [[file.replace('\n', '')] for file in open('filesList.txt', 'r').readlines()]
+config.inputParams = [[file.replace('\n', '')] for file in open('inputFilesList.txt', 'r').readlines()]
 
 config.payload = \
 """
