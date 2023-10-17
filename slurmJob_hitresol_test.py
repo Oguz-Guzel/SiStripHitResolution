@@ -59,12 +59,12 @@ config.numJobs = None
 
 config.inputParamsNames = ['inputFile']
 
-config.inputParams = [[file.replace('\n', '')] for file in open('inputFilesList.txt', 'r').readlines()]
+config.inputParams = [[file.replace('\n', '')] for file in open('filesList.txt', 'r').readlines()]
 
 config.payload = \
 """
 cd /home/ucl/cp3/aguzel/CMSSW_13_1_0_pre1/src/
 eval `scramv1 runtime -sh`
-cd CalibTracker/SiStripHitResolution/slurm_split_files/
-cmsRun test/SiStripHitResol_testULcosmics_test.py inputFiles=/home/ucl/cp3/aguzel/CMSSW_13_1_0_pre1/src/CalibTracker/SiStripHitResolution/slurm_split_files_800/${inputFile}
+cd CalibTracker/SiStripHitResolution/2023C/
+cmsRun test/SiStripHitResol_testULcosmics_test.py inputFiles=/home/ucl/cp3/aguzel/CMSSW_13_1_0_pre1/src/CalibTracker/SiStripHitResolution/2023C/${inputFile}
 """
